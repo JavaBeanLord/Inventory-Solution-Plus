@@ -4,7 +4,7 @@ Public Class Main
 
     Private connStr As String = "Database=localtest;" & _
             "Data Source=127.0.0.1;" & _
-            "User Id=root;Password=password"
+            "User Id=Ethan;Password=password"
     Private selectedCompID As String
 
 #Region "Beta Tool ToolStrip Menu"
@@ -69,6 +69,10 @@ Public Class Main
 
 #Region "DataGrid Interaction"
 
+    Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
+        loadInventoryTable()
+    End Sub
+
     Private Sub searchtb_KeyDown(sender As Object, e As KeyEventArgs) Handles searchtb.KeyDown
         If e.KeyCode = Keys.Enter Then
             If searchtb.Text = Nothing Then
@@ -88,6 +92,8 @@ Public Class Main
         TextBox3.Text = selectedRow.Cells(2).Value
         TextBox4.Text = selectedRow.Cells(3).Value
         TextBox5.Text = selectedRow.Cells(4).Value
+
+        updateRadio.Checked = True
     End Sub
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
@@ -102,11 +108,8 @@ Public Class Main
                          "VALUES ('" & DataGridView1.RowCount & "', '" & TextBox2.Text & "', '" & _
                          TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "')")
         End If
-            loadInventoryTable()
-            TextBox2.Text = ""
-            TextBox3.Text = ""
-            TextBox4.Text = ""
-            TextBox5.Text = ""
+        loadInventoryTable()
+        clearAll()
     End Sub
 
     Private Sub loadInventoryTable()
@@ -176,6 +179,13 @@ Public Class Main
         Finally
             connection.Close()
         End Try
+    End Sub
+
+    Public Sub clearAll()
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
     End Sub
 
 #End Region

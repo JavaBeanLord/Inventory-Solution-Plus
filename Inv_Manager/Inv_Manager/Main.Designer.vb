@@ -54,6 +54,7 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.refreshButton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -299,6 +300,7 @@ Partial Class Main
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel4.Controls.Add(Me.refreshButton)
         Me.Panel4.Controls.Add(Me.searchbtn)
         Me.Panel4.Controls.Add(Me.searchtb)
         Me.Panel4.Location = New System.Drawing.Point(7, 7)
@@ -355,6 +357,15 @@ Partial Class Main
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'refreshButton
+        '
+        Me.refreshButton.Location = New System.Drawing.Point(400, 2)
+        Me.refreshButton.Name = "refreshButton"
+        Me.refreshButton.Size = New System.Drawing.Size(26, 23)
+        Me.refreshButton.TabIndex = 2
+        Me.refreshButton.Text = "R"
+        Me.refreshButton.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -415,4 +426,5 @@ Partial Class Main
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents insertRadio As System.Windows.Forms.RadioButton
     Friend WithEvents updateRadio As System.Windows.Forms.RadioButton
+    Friend WithEvents refreshButton As System.Windows.Forms.Button
 End Class
