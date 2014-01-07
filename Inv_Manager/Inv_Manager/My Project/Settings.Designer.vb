@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("test")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("password")>  _
         Public Property password() As String
             Get
                 Return CType(Me("password"),String)

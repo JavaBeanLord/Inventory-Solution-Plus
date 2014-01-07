@@ -34,8 +34,22 @@ Partial Class Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.searchtb = New System.Windows.Forms.TextBox()
+        Me.searchbtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -57,7 +71,7 @@ Partial Class Main
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "close"
         '
         'ToolsToolStripMenuItem
@@ -70,7 +84,7 @@ Partial Class Main
         'BetaToolStripMenuItem
         '
         Me.BetaToolStripMenuItem.Name = "BetaToolStripMenuItem"
-        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BetaToolStripMenuItem.Text = "Beta"
         '
         'Panel1
@@ -119,11 +133,100 @@ Partial Class Main
         Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel3.Controls.Add(Me.TabControl1)
         Me.Panel3.Location = New System.Drawing.Point(12, 28)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(659, 312)
         Me.Panel3.TabIndex = 2
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 3)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(659, 312)
+        Me.TabControl1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(651, 286)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Invetory Input"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Panel4)
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(651, 286)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Invetory DataBase"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(651, 286)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Invetory Reports"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(651, 286)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Invetory Ebay Manager"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 39)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(638, 241)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel4.Controls.Add(Me.searchbtn)
+        Me.Panel4.Controls.Add(Me.searchtb)
+        Me.Panel4.Location = New System.Drawing.Point(7, 7)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(637, 26)
+        Me.Panel4.TabIndex = 1
+        '
+        'searchtb
+        '
+        Me.searchtb.Location = New System.Drawing.Point(432, 3)
+        Me.searchtb.Name = "searchtb"
+        Me.searchtb.Size = New System.Drawing.Size(121, 20)
+        Me.searchtb.TabIndex = 0
+        '
+        'searchbtn
+        '
+        Me.searchbtn.Location = New System.Drawing.Point(559, 3)
+        Me.searchbtn.Name = "searchbtn"
+        Me.searchbtn.Size = New System.Drawing.Size(75, 20)
+        Me.searchbtn.TabIndex = 1
+        Me.searchbtn.Text = "Search"
+        Me.searchbtn.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -141,6 +244,12 @@ Partial Class Main
         Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,4 +265,13 @@ Partial Class Main
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents searchbtn As System.Windows.Forms.Button
+    Friend WithEvents searchtb As System.Windows.Forms.TextBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
 End Class

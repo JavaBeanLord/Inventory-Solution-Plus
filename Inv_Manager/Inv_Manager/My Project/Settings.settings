@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">test</Value>
+      <Value Profile="(Default)">password</Value>
     </Setting>
     <Setting Name="finsh" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">7</Value>
