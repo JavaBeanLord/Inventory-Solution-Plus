@@ -19,6 +19,26 @@
         Timer1.Enabled = True
         ''end Timer Complete
 
+
+        ''Etahn Code
+        Try
+            Dim query As String = "SELECT * FROM inventory"
+            Dim connection As New MySqlConnection(connStr)
+            Dim da As New MySqlDataAdapter(query, connection)
+            Dim ds As New DataSet()
+
+            If da.Fill(ds) Then
+                output.DataSource = ds.Tables(0)
+            End If
+
+            connection.Close()
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+        'end Ethan Code
+
+
+
     End Sub
 #End Region
 
@@ -61,4 +81,5 @@
     End Sub
 #End Region
 
+  
 End Class
