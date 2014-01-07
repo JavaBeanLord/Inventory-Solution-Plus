@@ -26,6 +26,8 @@ Public Class Main
         ''end Timer Complete
 
         loadInventoryTable()
+
+        actionCombo.SelectedItem = "Insert"
     End Sub
 #End Region
 
@@ -92,21 +94,24 @@ Public Class Main
         TextBox3.Text = selectedRow.Cells(2).Value
         TextBox4.Text = selectedRow.Cells(3).Value
         TextBox5.Text = selectedRow.Cells(4).Value
-
-        updateRadio.Checked = True
     End Sub
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
-        If selectedCompID = Nothing And updateRadio.Checked Then
+        If selectedCompID = Nothing And actionCombo.SelectedItem = "Update" Then
             MsgBox("Please select an item or enter a new one.")
-        ElseIf updateRadio.Checked Then
-            updateRecord("UPDATE inventory SET CompName='" & TextBox2.Text & "', Manufacturer='" & TextBox3.Text & _
-                "', OperatingSys='" & TextBox4.Text & "', Quantity='" & TextBox5.Text & _
-                "' WHERE CompID='" & selectedCompID & "'")
-        ElseIf insertRadio.Checked Then
+
+        ElseIf actionCombo.SelectedItem = "Insert" Then
             updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
                          "VALUES ('" & DataGridView1.RowCount & "', '" & TextBox2.Text & "', '" & _
                          TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "')")
+
+        ElseIf actionCombo.SelectedItem = "Update" Then
+            updateRecord("UPDATE inventory SET CompName='" & TextBox2.Text & "', Manufacturer='" & TextBox3.Text & _
+                "', OperatingSys='" & TextBox4.Text & "', Quantity='" & TextBox5.Text & _
+                "' WHERE CompID='" & selectedCompID & "'")
+
+        ElseIf actionCombo.SelectedItem = "Delete" Then
+            updateRecord("DELETE FROM inventory WHERE CompID='" & selectedCompID & "'")
         End If
         loadInventoryTable()
         clearAll()

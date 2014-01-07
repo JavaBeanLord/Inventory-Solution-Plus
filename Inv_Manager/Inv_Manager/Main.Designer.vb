@@ -37,8 +37,6 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.insertRadio = New System.Windows.Forms.RadioButton()
-        Me.updateRadio = New System.Windows.Forms.RadioButton()
         Me.enterButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -49,12 +47,13 @@ Partial Class Main
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.refreshButton = New System.Windows.Forms.Button()
         Me.searchbtn = New System.Windows.Forms.Button()
         Me.searchtb = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.refreshButton = New System.Windows.Forms.Button()
+        Me.actionCombo = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -179,8 +178,7 @@ Partial Class Main
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.insertRadio)
-        Me.TabPage2.Controls.Add(Me.updateRadio)
+        Me.TabPage2.Controls.Add(Me.actionCombo)
         Me.TabPage2.Controls.Add(Me.enterButton)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.Label4)
@@ -200,28 +198,6 @@ Partial Class Main
         Me.TabPage2.Text = "Invetory DataBase"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'insertRadio
-        '
-        Me.insertRadio.AutoSize = True
-        Me.insertRadio.Checked = True
-        Me.insertRadio.Location = New System.Drawing.Point(40, 247)
-        Me.insertRadio.Name = "insertRadio"
-        Me.insertRadio.Size = New System.Drawing.Size(85, 17)
-        Me.insertRadio.TabIndex = 28
-        Me.insertRadio.TabStop = True
-        Me.insertRadio.Text = "New Record"
-        Me.insertRadio.UseVisualStyleBackColor = True
-        '
-        'updateRadio
-        '
-        Me.updateRadio.AutoSize = True
-        Me.updateRadio.Location = New System.Drawing.Point(40, 264)
-        Me.updateRadio.Name = "updateRadio"
-        Me.updateRadio.Size = New System.Drawing.Size(98, 17)
-        Me.updateRadio.TabIndex = 27
-        Me.updateRadio.Text = "Update Record"
-        Me.updateRadio.UseVisualStyleBackColor = True
-        '
         'enterButton
         '
         Me.enterButton.Location = New System.Drawing.Point(571, 258)
@@ -236,9 +212,9 @@ Partial Class Main
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(461, 244)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 13)
+        Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 22
-        Me.Label5.Text = "Model Number:"
+        Me.Label5.Text = "Quantity:"
         '
         'Label4
         '
@@ -308,6 +284,15 @@ Partial Class Main
         Me.Panel4.Size = New System.Drawing.Size(637, 26)
         Me.Panel4.TabIndex = 1
         '
+        'refreshButton
+        '
+        Me.refreshButton.Location = New System.Drawing.Point(400, 2)
+        Me.refreshButton.Name = "refreshButton"
+        Me.refreshButton.Size = New System.Drawing.Size(26, 23)
+        Me.refreshButton.TabIndex = 2
+        Me.refreshButton.Text = "R"
+        Me.refreshButton.UseVisualStyleBackColor = True
+        '
         'searchbtn
         '
         Me.searchbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -358,14 +343,15 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'refreshButton
+        'actionCombo
         '
-        Me.refreshButton.Location = New System.Drawing.Point(400, 2)
-        Me.refreshButton.Name = "refreshButton"
-        Me.refreshButton.Size = New System.Drawing.Size(26, 23)
-        Me.refreshButton.TabIndex = 2
-        Me.refreshButton.Text = "R"
-        Me.refreshButton.UseVisualStyleBackColor = True
+        Me.actionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.actionCombo.FormattingEnabled = True
+        Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete"})
+        Me.actionCombo.Location = New System.Drawing.Point(14, 258)
+        Me.actionCombo.Name = "actionCombo"
+        Me.actionCombo.Size = New System.Drawing.Size(121, 21)
+        Me.actionCombo.TabIndex = 27
         '
         'Main
         '
@@ -424,7 +410,6 @@ Partial Class Main
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents insertRadio As System.Windows.Forms.RadioButton
-    Friend WithEvents updateRadio As System.Windows.Forms.RadioButton
     Friend WithEvents refreshButton As System.Windows.Forms.Button
+    Friend WithEvents actionCombo As System.Windows.Forms.ComboBox
 End Class
