@@ -25,22 +25,7 @@ Public Class Main
         Timer1.Enabled = True
         ''end Timer Complete
 
-        ''Etahn Code
-        Try
-            Dim query As String = "SELECT * FROM inventory"
-            Dim connection As New MySqlConnection(connStr)
-            Dim da As New MySqlDataAdapter(query, connection)
-            Dim ds As New DataSet()
-
-            If da.Fill(ds) Then
-                DataGridView1.DataSource = ds.Tables(0)
-            End If
-
-            connection.Close()
-        Catch ex As Exception
-            Console.WriteLine(ex.Message)
-        End Try
-        'end Ethan Code
+        loadInventoryTable()
     End Sub
 #End Region
 
@@ -94,6 +79,55 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub output_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Dim selectedRow As Object = DataGridView1.Rows(e.RowIndex)
+
+        selectedCompID = selectedRow.Cells(0).Value
+
+        TextBox2.Text = selectedRow.Cells(1).Value
+        TextBox3.Text = selectedRow.Cells(2).Value
+        TextBox4.Text = selectedRow.Cells(3).Value
+        TextBox5.Text = selectedRow.Cells(4).Value
+    End Sub
+
+    Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
+        If selectedCompID = Nothing And updateRadio.Checked Then
+            MsgBox("Please select an item or enter a new one.")
+        ElseIf updateRadio.Checked Then
+            updateRecord("UPDATE inventory SET CompName='" & TextBox2.Text & "', Manufacturer='" & TextBox3.Text & _
+                "', OperatingSys='" & TextBox4.Text & "', Quantity='" & TextBox5.Text & _
+                "' WHERE CompID='" & selectedCompID & "'")
+        ElseIf insertRadio.Checked Then
+            updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
+                         "VALUES ('" & DataGridView1.RowCount & "', '" & TextBox2.Text & "', '" & _
+                         TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "')")
+        End If
+            loadInventoryTable()
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+            TextBox5.Text = ""
+    End Sub
+
+    Private Sub loadInventoryTable()
+        Try
+            Dim query As String = "SELECT * FROM inventory"
+            Dim connection As New MySqlConnection(connStr)
+            Dim da As New MySqlDataAdapter(query, connection)
+            Dim ds As New DataSet()
+
+            If da.Fill(ds) Then
+                DataGridView1.DataSource = ds.Tables(0)
+            End If
+
+            connection.Close()
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
+
+    ' Takes name of computer as key word
+    ' needs to incorporate other fields as key words
     Public Sub retrieveDataToDataGrid(compName As String)
         Try
             Dim query As String = "SELECT * FROM inventory WHERE CompName = '" & compName & "'"
@@ -112,6 +146,7 @@ Public Class Main
         End Try
     End Sub
 
+    ' Takes any UPDATE or INSERT command
     Function updateRecord(ByVal query As String) As Integer
         Try
             Dim rowsEffected As Integer = 0
@@ -145,5 +180,4 @@ Public Class Main
 
 #End Region
 
-  
 End Class

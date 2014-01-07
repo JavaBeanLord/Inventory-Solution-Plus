@@ -37,6 +37,17 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.insertRadio = New System.Windows.Forms.RadioButton()
+        Me.updateRadio = New System.Windows.Forms.RadioButton()
+        Me.enterButton = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.searchbtn = New System.Windows.Forms.Button()
         Me.searchtb = New System.Windows.Forms.TextBox()
@@ -167,6 +178,17 @@ Partial Class Main
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.insertRadio)
+        Me.TabPage2.Controls.Add(Me.updateRadio)
+        Me.TabPage2.Controls.Add(Me.enterButton)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Controls.Add(Me.TextBox4)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.Panel4)
         Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -176,6 +198,101 @@ Partial Class Main
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Invetory DataBase"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'insertRadio
+        '
+        Me.insertRadio.AutoSize = True
+        Me.insertRadio.Checked = True
+        Me.insertRadio.Location = New System.Drawing.Point(40, 247)
+        Me.insertRadio.Name = "insertRadio"
+        Me.insertRadio.Size = New System.Drawing.Size(85, 17)
+        Me.insertRadio.TabIndex = 28
+        Me.insertRadio.TabStop = True
+        Me.insertRadio.Text = "New Record"
+        Me.insertRadio.UseVisualStyleBackColor = True
+        '
+        'updateRadio
+        '
+        Me.updateRadio.AutoSize = True
+        Me.updateRadio.Location = New System.Drawing.Point(40, 264)
+        Me.updateRadio.Name = "updateRadio"
+        Me.updateRadio.Size = New System.Drawing.Size(98, 17)
+        Me.updateRadio.TabIndex = 27
+        Me.updateRadio.Text = "Update Record"
+        Me.updateRadio.UseVisualStyleBackColor = True
+        '
+        'enterButton
+        '
+        Me.enterButton.Location = New System.Drawing.Point(571, 258)
+        Me.enterButton.Name = "enterButton"
+        Me.enterButton.Size = New System.Drawing.Size(75, 23)
+        Me.enterButton.TabIndex = 26
+        Me.enterButton.Text = "Enter"
+        Me.enterButton.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(461, 244)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(79, 13)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "Model Number:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(353, 244)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Operating System:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(247, 244)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 13)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "Manufacturer:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(141, 244)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(86, 13)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Computer Name:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(462, 260)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 18
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(356, 260)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 19
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(250, 260)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 20
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(144, 260)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 21
         '
         'Panel4
         '
@@ -216,7 +333,7 @@ Partial Class Main
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 39)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(638, 241)
+        Me.DataGridView1.Size = New System.Drawing.Size(638, 202)
         Me.DataGridView1.TabIndex = 0
         '
         'TabPage3
@@ -258,6 +375,7 @@ Partial Class Main
         Me.Panel3.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -285,4 +403,15 @@ Partial Class Main
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents enterButton As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents insertRadio As System.Windows.Forms.RadioButton
+    Friend WithEvents updateRadio As System.Windows.Forms.RadioButton
 End Class
