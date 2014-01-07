@@ -1,5 +1,11 @@
-﻿Public Class Main
+﻿Imports MySql.Data.MySqlClient
 
+Public Class Main
+
+    Private connStr As String = "Database=localtest;" & _
+            "Data Source=127.0.0.1;" & _
+            "User Id=root;Password=password"
+    Private selectedCompID As String
 
 #Region "Beta Tool ToolStrip Menu"
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
@@ -19,7 +25,6 @@
         Timer1.Enabled = True
         ''end Timer Complete
 
-
         ''Etahn Code
         Try
             Dim query As String = "SELECT * FROM inventory"
@@ -28,7 +33,7 @@
             Dim ds As New DataSet()
 
             If da.Fill(ds) Then
-                output.DataSource = ds.Tables(0)
+                DataGridView1.DataSource = ds.Tables(0)
             End If
 
             connection.Close()
@@ -36,9 +41,6 @@
             Console.WriteLine(ex.Message)
         End Try
         'end Ethan Code
-
-
-
     End Sub
 #End Region
 
@@ -75,10 +77,72 @@
         If searchtb.Text = ("Search").ToString Then
             searchtb.Text = ("").ToString
             searchtb.ReadOnly = False
+        End If
 
+    End Sub
+#End Region
 
+#Region "DataGrid Interaction"
+
+    Private Sub searchtb_KeyDown(sender As Object, e As KeyEventArgs) Handles searchtb.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If searchtb.Text = Nothing Then
+                MsgBox("Please choose a type of item.")
+            Else
+                retrieveDataToDataGrid(searchtb.Text)
+            End If
         End If
     End Sub
+
+    Public Sub retrieveDataToDataGrid(compName As String)
+        Try
+            Dim query As String = "SELECT * FROM inventory WHERE CompName = '" & compName & "'"
+            Dim connection As New MySqlConnection(connStr)
+            Dim da As New MySqlDataAdapter(query, connection)
+            Dim ds As New DataSet()
+
+            If da.Fill(ds) Then
+                DataGridView1.DataSource = ds.Tables(0)
+            End If
+
+            connection.Close()
+
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
+
+    Function updateRecord(ByVal query As String) As Integer
+        Try
+            Dim rowsEffected As Integer = 0
+            Dim connection As New MySqlConnection(connStr)
+            Dim cmd As New MySqlCommand(query, connection)
+
+            connection.Open()
+
+            rowsEffected = cmd.ExecuteNonQuery()
+
+            connection.Close()
+
+            Return rowsEffected
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Private Sub TestConnection()
+        Dim connection As New MySqlConnection(connStr)
+        Try
+            connection.Open()
+            MsgBox("Connection is okay. MySQL version: " & connection.ServerVersion)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
 #End Region
 
   
