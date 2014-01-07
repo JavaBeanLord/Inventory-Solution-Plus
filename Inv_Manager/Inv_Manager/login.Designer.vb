@@ -44,6 +44,7 @@ Partial Class login
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +64,7 @@ Partial Class login
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.userpassword)
@@ -96,9 +98,11 @@ Partial Class login
         '
         'userpassword
         '
+        Me.userpassword.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userpassword.Location = New System.Drawing.Point(147, 94)
         Me.userpassword.Name = "userpassword"
-        Me.userpassword.Size = New System.Drawing.Size(172, 22)
+        Me.userpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.userpassword.Size = New System.Drawing.Size(172, 25)
         Me.userpassword.TabIndex = 5
         '
         'Label2
@@ -235,6 +239,16 @@ Partial Class login
         '
         Me.Timer2.Interval = 20
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(219, 121)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 19)
+        Me.CheckBox1.TabIndex = 8
+        Me.CheckBox1.Text = "Save Password?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'login
         '
         Me.AcceptButton = Me.Button1
@@ -282,5 +296,6 @@ Partial Class login
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 
 End Class

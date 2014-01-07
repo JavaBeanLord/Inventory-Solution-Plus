@@ -37,19 +37,19 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.searchbtn = New System.Windows.Forms.Button()
+        Me.searchtb = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.searchtb = New System.Windows.Forms.TextBox()
-        Me.searchbtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -71,7 +71,7 @@ Partial Class Main
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
         Me.CloseToolStripMenuItem.Text = "close"
         '
         'ToolsToolStripMenuItem
@@ -84,7 +84,7 @@ Partial Class Main
         'BetaToolStripMenuItem
         '
         Me.BetaToolStripMenuItem.Name = "BetaToolStripMenuItem"
-        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
         Me.BetaToolStripMenuItem.Text = "Beta"
         '
         'Panel1
@@ -142,6 +142,9 @@ Partial Class Main
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
@@ -174,6 +177,48 @@ Partial Class Main
         Me.TabPage2.Text = "Invetory DataBase"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel4.Controls.Add(Me.searchbtn)
+        Me.Panel4.Controls.Add(Me.searchtb)
+        Me.Panel4.Location = New System.Drawing.Point(7, 7)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(637, 26)
+        Me.Panel4.TabIndex = 1
+        '
+        'searchbtn
+        '
+        Me.searchbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchbtn.Location = New System.Drawing.Point(559, 3)
+        Me.searchbtn.Name = "searchbtn"
+        Me.searchbtn.Size = New System.Drawing.Size(75, 20)
+        Me.searchbtn.TabIndex = 1
+        Me.searchbtn.Text = "Search"
+        Me.searchbtn.UseVisualStyleBackColor = True
+        '
+        'searchtb
+        '
+        Me.searchtb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchtb.Location = New System.Drawing.Point(432, 3)
+        Me.searchtb.Name = "searchtb"
+        Me.searchtb.Size = New System.Drawing.Size(121, 20)
+        Me.searchtb.TabIndex = 0
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 39)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(638, 241)
+        Me.DataGridView1.TabIndex = 0
+        '
         'TabPage3
         '
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
@@ -194,40 +239,6 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 39)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(638, 241)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel4.Controls.Add(Me.searchbtn)
-        Me.Panel4.Controls.Add(Me.searchtb)
-        Me.Panel4.Location = New System.Drawing.Point(7, 7)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(637, 26)
-        Me.Panel4.TabIndex = 1
-        '
-        'searchtb
-        '
-        Me.searchtb.Location = New System.Drawing.Point(432, 3)
-        Me.searchtb.Name = "searchtb"
-        Me.searchtb.Size = New System.Drawing.Size(121, 20)
-        Me.searchtb.TabIndex = 0
-        '
-        'searchbtn
-        '
-        Me.searchbtn.Location = New System.Drawing.Point(559, 3)
-        Me.searchbtn.Name = "searchbtn"
-        Me.searchbtn.Size = New System.Drawing.Size(75, 20)
-        Me.searchbtn.TabIndex = 1
-        Me.searchbtn.Text = "Search"
-        Me.searchbtn.UseVisualStyleBackColor = True
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,9 +258,9 @@ Partial Class Main
         Me.Panel3.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

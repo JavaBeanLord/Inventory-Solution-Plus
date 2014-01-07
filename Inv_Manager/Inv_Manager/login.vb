@@ -60,4 +60,9 @@
 
 
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        PasswordVer.Show()
+
+    End Sub
 End Class
