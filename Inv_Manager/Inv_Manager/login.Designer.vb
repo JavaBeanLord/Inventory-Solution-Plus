@@ -25,6 +25,7 @@ Partial Class login
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.userpassword = New System.Windows.Forms.TextBox()
@@ -44,7 +45,8 @@ Partial Class login
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tri = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +66,7 @@ Partial Class login
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -77,6 +80,16 @@ Partial Class login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(433, 143)
         Me.Panel1.TabIndex = 1
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(219, 121)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 19)
+        Me.CheckBox1.TabIndex = 8
+        Me.CheckBox1.Text = "Save Password?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -239,15 +252,14 @@ Partial Class login
         '
         Me.Timer2.Interval = 20
         '
-        'CheckBox1
+        'Label4
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(219, 121)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 19)
-        Me.CheckBox1.TabIndex = 8
-        Me.CheckBox1.Text = "Save Password?"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 15)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "400000"
         '
         'login
         '
@@ -297,5 +309,7 @@ Partial Class login
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents tri As System.Windows.Forms.Timer
 
 End Class

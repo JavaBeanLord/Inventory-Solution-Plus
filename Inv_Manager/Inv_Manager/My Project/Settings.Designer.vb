@@ -89,6 +89,18 @@ Namespace My
                 Me("Setting") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("400000")>  _
+        Public Property tryme() As Integer
+            Get
+                Return CType(Me("tryme"),Integer)
+            End Get
+            Set
+                Me("tryme") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
