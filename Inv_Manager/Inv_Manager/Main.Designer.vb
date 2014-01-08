@@ -37,6 +37,7 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.actionCombo = New System.Windows.Forms.ComboBox()
         Me.enterButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -53,7 +54,6 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.actionCombo = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -197,6 +197,16 @@ Partial Class Main
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Invetory DataBase"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'actionCombo
+        '
+        Me.actionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.actionCombo.FormattingEnabled = True
+        Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete"})
+        Me.actionCombo.Location = New System.Drawing.Point(14, 258)
+        Me.actionCombo.Name = "actionCombo"
+        Me.actionCombo.Size = New System.Drawing.Size(121, 21)
+        Me.actionCombo.TabIndex = 27
         '
         'enterButton
         '
@@ -343,19 +353,9 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'actionCombo
-        '
-        Me.actionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.actionCombo.FormattingEnabled = True
-        Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete"})
-        Me.actionCombo.Location = New System.Drawing.Point(14, 258)
-        Me.actionCombo.Name = "actionCombo"
-        Me.actionCombo.Size = New System.Drawing.Size(121, 21)
-        Me.actionCombo.TabIndex = 27
-        '
         'Main
         '
-        Me.AcceptButton = Me.searchbtn
+        Me.AcceptButton = Me.enterButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(683, 395)
@@ -365,7 +365,7 @@ Partial Class Main
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Main"
-        Me.Text = "Main"
+        Me.Text = "Inventory Manager"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

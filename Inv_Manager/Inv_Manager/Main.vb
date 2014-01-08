@@ -94,9 +94,27 @@ Public Class Main
         TextBox3.Text = selectedRow.Cells(2).Value
         TextBox4.Text = selectedRow.Cells(3).Value
         TextBox5.Text = selectedRow.Cells(4).Value
+
+        actionCombo.SelectedItem = "Update"
+    End Sub
+
+    Private Sub actionCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles actionCombo.SelectedIndexChanged
+        clearAll()
     End Sub
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
+        checkForEmptiness()
+    End Sub
+
+    Public Sub checkForEmptiness()
+        If TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" And TextBox5.Text = "" Then
+            MsgBox("Please fill at least one field.")
+        Else
+            performDesiredAction()
+        End If
+    End Sub
+
+    Public Sub performDesiredAction()
         If selectedCompID = Nothing And actionCombo.SelectedItem = "Update" Then
             MsgBox("Please select an item or enter a new one.")
 
@@ -194,5 +212,4 @@ Public Class Main
     End Sub
 
 #End Region
-
 End Class
