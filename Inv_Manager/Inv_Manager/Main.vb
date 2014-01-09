@@ -70,6 +70,14 @@ Public Class Main
         loadInventoryTable()
     End Sub
 
+    Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
+        If searchtb.Text = Nothing Then
+            MsgBox("Please choose a type of item.")
+        Else
+            retrieveDataToDataGrid(searchtb.Text)
+        End If
+    End Sub
+
     Private Sub searchtb_KeyDown(sender As Object, e As KeyEventArgs) Handles searchtb.KeyDown
         If e.KeyCode = Keys.Enter Then
             If searchtb.Text = Nothing Then
