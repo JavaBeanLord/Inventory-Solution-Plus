@@ -82,12 +82,12 @@ Partial Class Main
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.refreshButton = New System.Windows.Forms.Button()
         Me.searchbtn = New System.Windows.Forms.Button()
         Me.searchtb = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -104,6 +104,7 @@ Partial Class Main
         Me.TabPage2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -658,22 +659,13 @@ Partial Class Main
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel4.Controls.Add(Me.refreshButton)
+        Me.Panel4.Controls.Add(Me.PictureBox6)
         Me.Panel4.Controls.Add(Me.searchbtn)
         Me.Panel4.Controls.Add(Me.searchtb)
         Me.Panel4.Location = New System.Drawing.Point(7, 7)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(637, 26)
         Me.Panel4.TabIndex = 1
-        '
-        'refreshButton
-        '
-        Me.refreshButton.Location = New System.Drawing.Point(400, 2)
-        Me.refreshButton.Name = "refreshButton"
-        Me.refreshButton.Size = New System.Drawing.Size(26, 23)
-        Me.refreshButton.TabIndex = 2
-        Me.refreshButton.Text = "R"
-        Me.refreshButton.UseVisualStyleBackColor = True
         '
         'searchbtn
         '
@@ -726,6 +718,16 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Image = Global.Inv_Manager.My.Resources.Resources._1389253982_refresh_01
+        Me.PictureBox6.Location = New System.Drawing.Point(399, 3)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(27, 20)
+        Me.PictureBox6.TabIndex = 28
+        Me.PictureBox6.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -762,6 +764,7 @@ Partial Class Main
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -795,7 +798,6 @@ Partial Class Main
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents refreshButton As System.Windows.Forms.Button
     Friend WithEvents actionCombo As System.Windows.Forms.ComboBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -830,4 +832,5 @@ Partial Class Main
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
 End Class

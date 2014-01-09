@@ -66,7 +66,7 @@ Public Class Main
 
 #Region "DataGrid Interaction"
 
-    Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
+    Private Sub refreshButton_Click(sender As Object, e As EventArgs)
         loadInventoryTable()
     End Sub
 
