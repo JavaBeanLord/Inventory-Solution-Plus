@@ -77,6 +77,11 @@
     <Compile Include="Beta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Beta_Module.vb" />
+    <Compile Include="Inventory_DataBase_Module.vb" />
+    <Compile Include="Inventory_Ebay_Module.vb" />
+    <Compile Include="Inventory_Input_Module.vb" />
+    <Compile Include="Inventory_Reports_Module.vb" />
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +89,7 @@
       <DependentUpon>login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login_Module.vb" />
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,7 @@
     <Compile Include="PasswordVer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Password_Module.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Beta.resx">
