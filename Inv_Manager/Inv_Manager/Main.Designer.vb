@@ -140,6 +140,7 @@ Partial Class Main
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.Location = New System.Drawing.Point(12, 346)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(659, 39)
@@ -536,7 +537,7 @@ Partial Class Main
         Me.actionCombo.Location = New System.Drawing.Point(14, 258)
         Me.actionCombo.Name = "actionCombo"
         Me.actionCombo.Size = New System.Drawing.Size(121, 21)
-        Me.actionCombo.TabIndex = 27
+        Me.actionCombo.TabIndex = 3
         '
         'enterButton
         '
@@ -544,7 +545,7 @@ Partial Class Main
         Me.enterButton.Location = New System.Drawing.Point(571, 258)
         Me.enterButton.Name = "enterButton"
         Me.enterButton.Size = New System.Drawing.Size(75, 23)
-        Me.enterButton.TabIndex = 26
+        Me.enterButton.TabIndex = 8
         Me.enterButton.Text = "Enter"
         Me.enterButton.UseVisualStyleBackColor = True
         '
@@ -594,7 +595,7 @@ Partial Class Main
         Me.TextBox5.Location = New System.Drawing.Point(462, 260)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 18
+        Me.TextBox5.TabIndex = 7
         '
         'TextBox4
         '
@@ -602,7 +603,7 @@ Partial Class Main
         Me.TextBox4.Location = New System.Drawing.Point(356, 260)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 19
+        Me.TextBox4.TabIndex = 6
         '
         'TextBox3
         '
@@ -610,7 +611,7 @@ Partial Class Main
         Me.TextBox3.Location = New System.Drawing.Point(250, 260)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 20
+        Me.TextBox3.TabIndex = 5
         '
         'TextBox2
         '
@@ -618,7 +619,7 @@ Partial Class Main
         Me.TextBox2.Location = New System.Drawing.Point(144, 260)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 21
+        Me.TextBox2.TabIndex = 4
         '
         'Panel4
         '
@@ -664,15 +665,20 @@ Partial Class Main
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
         Me.DataGridView1.Location = New System.Drawing.Point(6, 39)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(638, 202)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.TabIndex = 2
         '
         'TabPage3
         '

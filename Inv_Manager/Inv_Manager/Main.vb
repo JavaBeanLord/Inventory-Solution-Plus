@@ -22,7 +22,7 @@ Public Class Main
 
         loadInventoryTable()
 
-        actionCombo.SelectedItem = "Insert"
+        actionCombo.SelectedItem = "Update"
     End Sub
 #End Region
 
@@ -68,10 +68,11 @@ Public Class Main
 
     Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
         loadInventoryTable()
+        clearAll()
     End Sub
 
     Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
-        If searchtb.Text = Nothing Then
+        If searchtb.Text = Nothing Or searchbtn.Text = "Search" Then
             MsgBox("Please choose a type of item.")
         Else
             retrieveDataToDataGrid(searchtb.Text)
@@ -88,7 +89,31 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub output_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub textBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            checkForEmptiness()
+        End If
+    End Sub
+
+    Private Sub textBox3_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox3.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            checkForEmptiness()
+        End If
+    End Sub
+
+    Private Sub textBox4_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox4.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            checkForEmptiness()
+        End If
+    End Sub
+
+    Private Sub textBox5_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox5.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            checkForEmptiness()
+        End If
+    End Sub
+
+    Private Sub output_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         populateTextBoxes(e)
     End Sub
 

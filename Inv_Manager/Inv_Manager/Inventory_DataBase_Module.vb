@@ -34,7 +34,7 @@ Module Inventory_DataBase_Module
 
         ElseIf Main.actionCombo.SelectedItem = "Insert" Then
             updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
-                         "VALUES ('" & Main.DataGridView1.RowCount & "', '" & Main.TextBox2.Text & "', '" & _
+                         "VALUES ('" & Main.DataGridView1.RowCount + 1 & "', '" & Main.TextBox2.Text & "', '" & _
                          Main.TextBox3.Text & "', '" & Main.TextBox4.Text & "', '" & Main.TextBox5.Text & "')")
 
         ElseIf Main.actionCombo.SelectedItem = "Update" Then
