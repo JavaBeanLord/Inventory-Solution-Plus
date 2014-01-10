@@ -51,7 +51,7 @@
 
 
 #Region "Server Status Bars"
-    Public Sub loginsearverstatus()
+    Public Sub loginserverstatus()
         ''Test timer if 
         If login.ProgressBar1.Value <= 99 Then
             login.ProgressBar1.Value = login.ProgressBar1.Value + 1

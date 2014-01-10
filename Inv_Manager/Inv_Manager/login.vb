@@ -27,7 +27,7 @@
 
 #Region "Server Statuse Bars"
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        loginsearverstatus()
+        loginserverstatus()
     End Sub
 #End Region
 
