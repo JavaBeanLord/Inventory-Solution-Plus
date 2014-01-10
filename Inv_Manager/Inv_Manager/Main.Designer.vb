@@ -37,6 +37,26 @@ Partial Class Main
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.actionCombo = New System.Windows.Forms.ComboBox()
         Me.enterButton = New System.Windows.Forms.Button()
@@ -55,41 +75,35 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -216,6 +230,205 @@ Partial Class Main
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Invetory Input"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(467, 263)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(82, 21)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Save"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(566, 263)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(82, 21)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(235, 263)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(82, 21)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Save && New"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(446, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(103, 13)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "Shipping Information"
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel9.Location = New System.Drawing.Point(449, 92)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(200, 84)
+        Me.Panel9.TabIndex = 7
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(231, 76)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(86, 13)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "More Information"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(232, 179)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(56, 13)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "Comments"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(4, 76)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(88, 13)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "Basic Information"
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel8.Controls.Add(Me.RichTextBox1)
+        Me.Panel8.Location = New System.Drawing.Point(235, 195)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(413, 62)
+        Me.Panel8.TabIndex = 3
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(4, 4)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(406, 55)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = ""
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel7.Location = New System.Drawing.Point(234, 91)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(206, 85)
+        Me.Panel7.TabIndex = 2
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel6.Controls.Add(Me.TextBox8)
+        Me.Panel6.Controls.Add(Me.TextBox7)
+        Me.Panel6.Controls.Add(Me.Label17)
+        Me.Panel6.Controls.Add(Me.Label16)
+        Me.Panel6.Controls.Add(Me.Label15)
+        Me.Panel6.Controls.Add(Me.TextBox6)
+        Me.Panel6.Controls.Add(Me.Label14)
+        Me.Panel6.Controls.Add(Me.RichTextBox2)
+        Me.Panel6.Controls.Add(Me.Label13)
+        Me.Panel6.Controls.Add(Me.ComboBox2)
+        Me.Panel6.Controls.Add(Me.Label12)
+        Me.Panel6.Controls.Add(Me.ComboBox1)
+        Me.Panel6.Controls.Add(Me.Label11)
+        Me.Panel6.Location = New System.Drawing.Point(7, 91)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(219, 193)
+        Me.Panel6.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.PictureBox5)
+        Me.Panel5.Controls.Add(Me.PictureBox4)
+        Me.Panel5.Controls.Add(Me.PictureBox3)
+        Me.Panel5.Controls.Add(Me.PictureBox2)
+        Me.Panel5.Controls.Add(Me.Label6)
+        Me.Panel5.Controls.Add(Me.TextBox1)
+        Me.Panel5.Controls.Add(Me.PictureBox1)
+        Me.Panel5.Location = New System.Drawing.Point(7, 7)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(638, 66)
+        Me.Panel5.TabIndex = 0
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox5.Location = New System.Drawing.Point(56, 45)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(20, 18)
+        Me.PictureBox5.TabIndex = 4
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox4.Location = New System.Drawing.Point(84, 45)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(20, 18)
+        Me.PictureBox4.TabIndex = 3
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox3.Location = New System.Drawing.Point(30, 45)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(20, 18)
+        Me.PictureBox3.TabIndex = 2
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox2.Location = New System.Drawing.Point(4, 45)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 18)
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(595, 18)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 33)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "*"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.TextBox1.Location = New System.Drawing.Point(120, 18)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(469, 31)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = "Enter Item Name"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 38)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'TabPage2
         '
@@ -394,191 +607,113 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Panel5
+        'Label11
         '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Controls.Add(Me.PictureBox5)
-        Me.Panel5.Controls.Add(Me.PictureBox4)
-        Me.Panel5.Controls.Add(Me.PictureBox3)
-        Me.Panel5.Controls.Add(Me.PictureBox2)
-        Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Controls.Add(Me.TextBox1)
-        Me.Panel5.Controls.Add(Me.PictureBox1)
-        Me.Panel5.Location = New System.Drawing.Point(7, 7)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(638, 66)
-        Me.Panel5.TabIndex = 0
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(5, 10)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(34, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Type:"
         '
-        'PictureBox1
+        'ComboBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.LightGray
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 38)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(45, 7)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 21)
+        Me.ComboBox1.TabIndex = 1
         '
-        'TextBox1
+        'Label12
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.TextBox1.Location = New System.Drawing.Point(120, 18)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(469, 31)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "Enter Item Name"
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(5, 43)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(65, 13)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "Department:"
         '
-        'Label6
+        'ComboBox2
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(595, 18)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 33)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "*"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(76, 40)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(129, 21)
+        Me.ComboBox2.TabIndex = 3
         '
-        'PictureBox2
+        'Label13
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.LightGray
-        Me.PictureBox2.Location = New System.Drawing.Point(4, 45)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(20, 18)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(5, 72)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(86, 13)
+        Me.Label13.TabIndex = 4
+        Me.Label13.Text = "Item Description:"
         '
-        'PictureBox3
+        'RichTextBox2
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.LightGray
-        Me.PictureBox3.Location = New System.Drawing.Point(30, 45)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(20, 18)
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
+        Me.RichTextBox2.Location = New System.Drawing.Point(8, 88)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(197, 34)
+        Me.RichTextBox2.TabIndex = 5
+        Me.RichTextBox2.Text = ""
         '
-        'PictureBox4
+        'Label14
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.LightGray
-        Me.PictureBox4.Location = New System.Drawing.Point(84, 45)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(20, 18)
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(5, 135)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(34, 13)
+        Me.Label14.TabIndex = 6
+        Me.Label14.Text = "Price:"
         '
-        'PictureBox5
+        'TextBox6
         '
-        Me.PictureBox5.BackColor = System.Drawing.Color.LightGray
-        Me.PictureBox5.Location = New System.Drawing.Point(56, 45)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(20, 18)
-        Me.PictureBox5.TabIndex = 4
-        Me.PictureBox5.TabStop = False
+        Me.TextBox6.Location = New System.Drawing.Point(67, 132)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox6.TabIndex = 7
         '
-        'Panel6
+        'Label15
         '
-        Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel6.Location = New System.Drawing.Point(7, 91)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(219, 193)
-        Me.Panel6.TabIndex = 1
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(42, 135)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(19, 13)
+        Me.Label15.TabIndex = 8
+        Me.Label15.Text = "($)"
         '
-        'Panel7
+        'Label16
         '
-        Me.Panel7.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel7.Location = New System.Drawing.Point(234, 91)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(206, 85)
-        Me.Panel7.TabIndex = 2
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(5, 166)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(32, 13)
+        Me.Label16.TabIndex = 9
+        Me.Label16.Text = "QTY:"
         '
-        'Panel8
+        'Label17
         '
-        Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel8.Controls.Add(Me.RichTextBox1)
-        Me.Panel8.Location = New System.Drawing.Point(235, 195)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(413, 62)
-        Me.Panel8.TabIndex = 3
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(110, 166)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(32, 13)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "UPC:"
         '
-        'Label7
+        'TextBox7
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(4, 76)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 13)
-        Me.Label7.TabIndex = 4
-        Me.Label7.Text = "Basic Information"
+        Me.TextBox7.Location = New System.Drawing.Point(42, 163)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(62, 20)
+        Me.TextBox7.TabIndex = 11
         '
-        'Label8
+        'TextBox8
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(232, 179)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(56, 13)
-        Me.Label8.TabIndex = 5
-        Me.Label8.Text = "Comments"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(231, 76)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(86, 13)
-        Me.Label9.TabIndex = 6
-        Me.Label9.Text = "More Information"
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel9.Location = New System.Drawing.Point(449, 92)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(200, 84)
-        Me.Panel9.TabIndex = 7
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(446, 76)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(103, 13)
-        Me.Label10.TabIndex = 8
-        Me.Label10.Text = "Shipping Information"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(235, 263)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 21)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Save && New"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(566, 263)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 21)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(467, 263)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(82, 21)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Save"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(4, 4)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(406, 55)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.TextBox8.Location = New System.Drawing.Point(143, 163)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(62, 20)
+        Me.TextBox8.TabIndex = 12
         '
         'Main
         '
@@ -602,19 +737,21 @@ Partial Class Main
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel8.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -670,4 +807,17 @@ Partial Class Main
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class
