@@ -1,11 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module Inventory_DataBase_Module
-
+    ''Justin Edit 1/10/2014 Please see ServerSettingsModule
     Public connStr As String = "Database=localtest;" & _
-            "Data Source=127.0.0.1;" & _
-            "User Id=Ethan;Password=password"
+          "Data Source=" & My.Settings.serverhost.ToString() & ";" & _
+          "User Id=" & My.Settings.serveruser.ToString() & ";Password=" & My.Settings.serverpassword.ToString()
     Public selectedCompID As String
+
 
     Public Sub populateTextBoxes(e As DataGridViewCellEventArgs)
         Dim selectedRow As Object = Main.DataGridView1.Rows(e.RowIndex)

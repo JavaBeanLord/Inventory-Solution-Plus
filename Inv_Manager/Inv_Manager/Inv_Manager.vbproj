@@ -136,6 +136,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Password_Module.vb" />
+    <Compile Include="ServerSettings.Designer.vb">
+      <DependentUpon>ServerSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ServerSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerSettingsModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Beta.resx">
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordVer.resx">
       <DependentUpon>PasswordVer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerSettings.resx">
+      <DependentUpon>ServerSettings.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -66,7 +66,6 @@ Partial Class Main
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.enteritemname = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.actionCombo = New System.Windows.Forms.ComboBox()
         Me.enterButton = New System.Windows.Forms.Button()
@@ -79,13 +78,15 @@ Partial Class Main
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.refreshButton = New System.Windows.Forms.PictureBox()
         Me.searchbtn = New System.Windows.Forms.Button()
         Me.searchtb = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.ServerSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.refreshButton = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -94,11 +95,11 @@ Partial Class Main
         Me.Panel8.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -125,7 +126,7 @@ Partial Class Main
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BetaToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ServerSettingsToolStripMenuItem, Me.BetaToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
@@ -133,7 +134,7 @@ Partial Class Main
         'BetaToolStripMenuItem
         '
         Me.BetaToolStripMenuItem.Name = "BetaToolStripMenuItem"
-        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BetaToolStripMenuItem.Text = "Beta"
         '
         'Panel1
@@ -403,7 +404,7 @@ Partial Class Main
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(8, 88)
+        Me.RichTextBox2.Location = New System.Drawing.Point(8, 92)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(197, 34)
         Me.RichTextBox2.TabIndex = 5
@@ -495,16 +496,6 @@ Partial Class Main
         Me.enteritemname.Size = New System.Drawing.Size(469, 31)
         Me.enteritemname.TabIndex = 1
         Me.enteritemname.Text = "Enter Item Name"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.Image = Global.Inv_Manager.My.Resources.Resources._1389256497_picture_01
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'TabPage2
         '
@@ -634,16 +625,6 @@ Partial Class Main
         Me.Panel4.Size = New System.Drawing.Size(637, 26)
         Me.Panel4.TabIndex = 1
         '
-        'refreshButton
-        '
-        Me.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.refreshButton.Image = Global.Inv_Manager.My.Resources.Resources._1389253982_refresh_01
-        Me.refreshButton.Location = New System.Drawing.Point(399, 3)
-        Me.refreshButton.Name = "refreshButton"
-        Me.refreshButton.Size = New System.Drawing.Size(27, 20)
-        Me.refreshButton.TabIndex = 28
-        Me.refreshButton.TabStop = False
-        '
         'searchbtn
         '
         Me.searchbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -700,6 +681,32 @@ Partial Class Main
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'ServerSettingsToolStripMenuItem
+        '
+        Me.ServerSettingsToolStripMenuItem.Name = "ServerSettingsToolStripMenuItem"
+        Me.ServerSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ServerSettingsToolStripMenuItem.Text = "Server Settings"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Image = Global.Inv_Manager.My.Resources.Resources._1389256497_picture_01
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'refreshButton
+        '
+        Me.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.refreshButton.Image = Global.Inv_Manager.My.Resources.Resources._1389253982_refresh_01
+        Me.refreshButton.Location = New System.Drawing.Point(399, 3)
+        Me.refreshButton.Name = "refreshButton"
+        Me.refreshButton.Size = New System.Drawing.Size(27, 20)
+        Me.refreshButton.TabIndex = 28
+        Me.refreshButton.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -726,13 +733,13 @@ Partial Class Main
         Me.Panel6.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -799,4 +806,5 @@ Partial Class Main
     Friend WithEvents refreshButton As System.Windows.Forms.PictureBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents ServerSettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

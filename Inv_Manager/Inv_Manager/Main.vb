@@ -127,4 +127,8 @@ Public Class Main
 
 #End Region
 
+    Private Sub ServerSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServerSettingsToolStripMenuItem.Click
+        ServerSettings.Show()
+
+    End Sub
 End Class
