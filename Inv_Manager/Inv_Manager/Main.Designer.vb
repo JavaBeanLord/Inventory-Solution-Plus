@@ -66,7 +66,7 @@ Partial Class Main
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.enteritemname = New System.Windows.Forms.TextBox()
+        Me.enterItemName = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.actionCombo = New System.Windows.Forms.ComboBox()
@@ -464,7 +464,7 @@ Partial Class Main
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel5.Controls.Add(Me.Label18)
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Controls.Add(Me.enteritemname)
+        Me.Panel5.Controls.Add(Me.enterItemName)
         Me.Panel5.Controls.Add(Me.PictureBox1)
         Me.Panel5.Location = New System.Drawing.Point(7, 7)
         Me.Panel5.Name = "Panel5"
@@ -492,16 +492,15 @@ Partial Class Main
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "*"
         '
-        'enteritemname
+        'enterItemName
         '
-        Me.enteritemname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.enteritemname.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.enteritemname.Location = New System.Drawing.Point(120, 18)
-        Me.enteritemname.Name = "enteritemname"
-        Me.enteritemname.ReadOnly = True
-        Me.enteritemname.Size = New System.Drawing.Size(469, 31)
-        Me.enteritemname.TabIndex = 1
-        Me.enteritemname.Text = "Enter Item Name"
+        Me.enterItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.enterItemName.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.enterItemName.Location = New System.Drawing.Point(120, 18)
+        Me.enterItemName.Name = "enterItemName"
+        Me.enterItemName.Size = New System.Drawing.Size(469, 31)
+        Me.enterItemName.TabIndex = 1
+        Me.enterItemName.Text = "Enter Item Name"
         '
         'PictureBox1
         '
@@ -711,7 +710,7 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 395)
+        Me.ClientSize = New System.Drawing.Size(683, 394)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -789,7 +788,7 @@ Partial Class Main
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents enteritemname As System.Windows.Forms.TextBox
+    Friend WithEvents enterItemName As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox

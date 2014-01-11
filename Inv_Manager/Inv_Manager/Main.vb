@@ -2,10 +2,14 @@
 
 Public Class Main
 
-#Region "Beta Tool ToolStrip Menu"
+#Region "ToolStrip Menus"
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
         'Show Beta From To EUser
         Beta.Show()
+    End Sub
+
+    Private Sub ServerSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServerSettingsToolStripMenuItem.Click
+        ServerSettings.Show()
     End Sub
 #End Region
 
@@ -59,6 +63,14 @@ Public Class Main
         If searchtb.Text = ("Search").ToString Then
             searchtb.Text = ("").ToString
             searchtb.ReadOnly = False
+        End If
+
+    End Sub
+
+    Private Sub enterItemName_Click(sender As Object, e As EventArgs) Handles enterItemName.Click
+
+        If enterItemName.Text = ("Enter Item Name").ToString Then
+            enterItemName.Text = ("").ToString
         End If
 
     End Sub
@@ -126,9 +138,4 @@ Public Class Main
     End Sub
 
 #End Region
-
-    Private Sub ServerSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServerSettingsToolStripMenuItem.Click
-        ServerSettings.Show()
-
-    End Sub
 End Class
