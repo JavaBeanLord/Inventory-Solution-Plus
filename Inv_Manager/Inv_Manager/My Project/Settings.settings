@@ -26,5 +26,11 @@
     <Setting Name="serverdatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="apiToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AgAAAA**AQAAAA**aAAAAA**ZkDSUg**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4GhC5eGoQ+dj6x9nY+seQ**En0CAA**AAMAAA**0+c7YnrtrmZWPAC09JeeluJ0Xu5akOAkMGPUsoGdAka05GiXZADHfgDxQSoFBvMMCVv7VGLcSsq2nR/vlAhKHqJ/AxLVbT5o+QLRvWLgHXR4QXWZ3wgEutzecKaNzx1nWUe/KrhBgkHJsGWvpRwHLo+oIYUIfO1NYDirsCath8LfpvPuVdMB4uR2Ft7p+/yhUt32CpspRrD4RGDZ2daZty1u+6YfT9s5IgLUQY0rpmnnRUhHf7Xg4fvGR0PfviOTlElELXkyOzQT4+bv1NIk7UB3Wg2/tu6BAT2VsIgbjdzk/k8OIYT8II5Msss69qOny34NHSAM8GAx+s+un+6CQSd0h4IaiM7tU+u1+2Jv85RABVZ9vOJY37WAyQ2KZ0u62+RihFHwYzqnfEz/DnMXqRKnJFzNlVvsKRyISJu9eBBRSX+16g6hH991TfKWjb8r6QoA21VyeJWHzmknB/46dsqN4ZWRIDhDlX/nGsBu4zEb9W1hY9tayvsQJxHZow9b49j/6fNshfR6VvjZC175ALFhteGc9GppICB4vcR5I2F45Brukmoj2iQohlW50I2B+7VTjs5f/70is78LEDbGNAz2RQUNTROAM1YsEZn72O5R9ddFhmOFk8DBTf5HetAbcg5K9tZcMljEjpK6IXCfmzSszw+hHbxI50aZ1/vF6uED3yERcamBVQMHAY3eM2OKX9CI3OWA/VzBfM83EiG2YcftMafYczdWCETq3gV1dZ0b+TpPEc4XLJjSLt2mZIDd</Value>
+    </Setting>
+    <Setting Name="ApiServerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.sandbox.ebay.com/wsapi</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

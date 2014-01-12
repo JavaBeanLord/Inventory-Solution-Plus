@@ -25,7 +25,7 @@ Public Class Main
         ''end Timer Complete
 
         loadInventoryTable()
-
+        eBayTime.Text = "eBay's Official Time: " & timeCallToEbay()
         actionCombo.SelectedItem = "Update"
     End Sub
 #End Region

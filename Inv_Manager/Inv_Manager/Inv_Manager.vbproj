@@ -64,6 +64,9 @@
     <ApplicationIcon>1389247862_49590.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="eBay.Service">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\eBay\eBay .NET SDK v849 Release\eBay.Service.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -87,6 +87,7 @@ Partial Class Main
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.eBayTime = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -100,6 +101,7 @@ Partial Class Main
         Me.Panel4.SuspendLayout()
         CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -698,6 +700,7 @@ Partial Class Main
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.eBayTime)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -705,6 +708,15 @@ Partial Class Main
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Invetory Ebay Manager"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'eBayTime
+        '
+        Me.eBayTime.AutoSize = True
+        Me.eBayTime.Location = New System.Drawing.Point(243, 133)
+        Me.eBayTime.Name = "eBayTime"
+        Me.eBayTime.Size = New System.Drawing.Size(163, 13)
+        Me.eBayTime.TabIndex = 0
+        Me.eBayTime.Text = "eBay time should be shown here."
         '
         'Main
         '
@@ -741,6 +753,8 @@ Partial Class Main
         Me.Panel4.PerformLayout()
         CType(Me.refreshButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -808,4 +822,5 @@ Partial Class Main
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents ServerSettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents eBayTime As System.Windows.Forms.Label
 End Class
