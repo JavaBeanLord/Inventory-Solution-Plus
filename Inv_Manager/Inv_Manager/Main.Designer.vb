@@ -86,8 +86,9 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.eBayTime = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.listItemButton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -700,6 +701,7 @@ Partial Class Main
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.listItemButton)
         Me.TabPage4.Controls.Add(Me.eBayTime)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
@@ -712,11 +714,20 @@ Partial Class Main
         'eBayTime
         '
         Me.eBayTime.AutoSize = True
-        Me.eBayTime.Location = New System.Drawing.Point(243, 133)
+        Me.eBayTime.Location = New System.Drawing.Point(411, 3)
         Me.eBayTime.Name = "eBayTime"
         Me.eBayTime.Size = New System.Drawing.Size(163, 13)
         Me.eBayTime.TabIndex = 0
         Me.eBayTime.Text = "eBay time should be shown here."
+        '
+        'listItemButton
+        '
+        Me.listItemButton.Location = New System.Drawing.Point(306, 113)
+        Me.listItemButton.Name = "listItemButton"
+        Me.listItemButton.Size = New System.Drawing.Size(75, 23)
+        Me.listItemButton.TabIndex = 1
+        Me.listItemButton.Text = "List Item"
+        Me.listItemButton.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -823,4 +834,5 @@ Partial Class Main
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents ServerSettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents eBayTime As System.Windows.Forms.Label
+    Friend WithEvents listItemButton As System.Windows.Forms.Button
 End Class

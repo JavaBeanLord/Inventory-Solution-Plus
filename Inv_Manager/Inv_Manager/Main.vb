@@ -25,7 +25,7 @@ Public Class Main
         ''end Timer Complete
 
         loadInventoryTable()
-        eBayTime.Text = "eBay's Official Time: " & timeCallToEbay()
+        eBayTime.Text = "eBay's Official Time: " & timeCall()
         actionCombo.SelectedItem = "Update"
     End Sub
 #End Region
@@ -135,6 +135,14 @@ Public Class Main
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
         checkForEmptiness()
+    End Sub
+
+#End Region
+
+#Region "eBay"
+
+    Private Sub listItemButton_Click(sender As Object, e As EventArgs) Handles listItemButton.Click
+        addItemCall()
     End Sub
 
 #End Region

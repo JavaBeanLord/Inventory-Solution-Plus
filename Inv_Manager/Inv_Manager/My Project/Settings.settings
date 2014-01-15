@@ -15,13 +15,13 @@
       <Value Profile="(Default)">400000</Value>
     </Setting>
     <Setting Name="serverhost" Type="System.String" Scope="User">
-      <Value Profile="(Default)">127.0.0.1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="serveruser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Ethan</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="serverpassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">password</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="serverdatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("127.0.0.1")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property serverhost() As String
             Get
                 Return CType(Me("serverhost"),String)
@@ -116,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Ethan")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property serveruser() As String
             Get
                 Return CType(Me("serveruser"),String)
@@ -128,7 +128,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("password")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property serverpassword() As String
             Get
                 Return CType(Me("serverpassword"),String)
