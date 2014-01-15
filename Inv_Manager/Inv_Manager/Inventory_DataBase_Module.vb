@@ -45,6 +45,10 @@ Module Inventory_DataBase_Module
 
         ElseIf Main.actionCombo.SelectedItem = "Delete" Then
             updateRecord("DELETE FROM inventory WHERE CompID='" & selectedCompID & "'")
+
+        ElseIf Main.actionCombo.SelectedItem = "List on eBay" Then
+            ' show ebay tab
+
         End If
         loadInventoryTable()
         clearAll()

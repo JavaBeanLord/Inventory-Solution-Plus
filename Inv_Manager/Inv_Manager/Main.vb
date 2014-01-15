@@ -130,7 +130,8 @@ Public Class Main
     End Sub
 
     Private Sub actionCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles actionCombo.SelectedIndexChanged
-        clearAll()
+        'clearAll()
+        ' should change enter button text instead of clear all
     End Sub
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click

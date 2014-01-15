@@ -97,12 +97,12 @@ Module Inventory_Ebay_Module
         Dim nameValueListType2 As NameValueListType = New NameValueListType()
         Dim nameValueCollection1 As StringCollection = New StringCollection()
         Dim nameValueCollection2 As StringCollection = New StringCollection()
-        ' items to be added to collection
-        Dim stringArray1() As String = {"Computer"}
-        Dim stringArray2() As String = {"Windows"}
         ' the names of each list
         nameValueListType1.Name = "Hardware"
         nameValueListType2.Name = "OS"
+        ' items to be added to collection
+        Dim stringArray1() As String = {"Computer"}
+        Dim stringArray2() As String = {"Windows"}
         ' adding arrays of values to collections
         nameValueCollection1.AddRange(stringArray1)
         nameValueCollection2.AddRange(stringArray2)

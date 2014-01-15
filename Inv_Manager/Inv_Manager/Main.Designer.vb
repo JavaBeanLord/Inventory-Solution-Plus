@@ -86,9 +86,17 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.listItemButton = New System.Windows.Forms.Button()
         Me.eBayTime = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.listItemButton = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -234,7 +242,7 @@ Partial Class Main
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(651, 286)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Invetory Input"
+        Me.TabPage1.Text = "Inventory Input"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button3
@@ -534,7 +542,7 @@ Partial Class Main
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(651, 286)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Invetory DataBase"
+        Me.TabPage2.Text = "Inventory Manager"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'actionCombo
@@ -542,7 +550,7 @@ Partial Class Main
         Me.actionCombo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.actionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.actionCombo.FormattingEnabled = True
-        Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete"})
+        Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete", "List on eBay"})
         Me.actionCombo.Location = New System.Drawing.Point(14, 258)
         Me.actionCombo.Name = "actionCombo"
         Me.actionCombo.Size = New System.Drawing.Size(121, 21)
@@ -696,11 +704,19 @@ Partial Class Main
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(651, 286)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Invetory Reports"
+        Me.TabPage3.Text = "Inventory Reports"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label19)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Controls.Add(Me.Label22)
+        Me.TabPage4.Controls.Add(Me.TextBox1)
+        Me.TabPage4.Controls.Add(Me.TextBox9)
+        Me.TabPage4.Controls.Add(Me.TextBox10)
+        Me.TabPage4.Controls.Add(Me.TextBox11)
         Me.TabPage4.Controls.Add(Me.listItemButton)
         Me.TabPage4.Controls.Add(Me.eBayTime)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
@@ -708,8 +724,17 @@ Partial Class Main
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage4.Size = New System.Drawing.Size(651, 286)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Invetory Ebay Manager"
+        Me.TabPage4.Text = "Ebay Lister"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'listItemButton
+        '
+        Me.listItemButton.Location = New System.Drawing.Point(500, 134)
+        Me.listItemButton.Name = "listItemButton"
+        Me.listItemButton.Size = New System.Drawing.Size(75, 23)
+        Me.listItemButton.TabIndex = 1
+        Me.listItemButton.Text = "List Item"
+        Me.listItemButton.UseVisualStyleBackColor = True
         '
         'eBayTime
         '
@@ -720,14 +745,77 @@ Partial Class Main
         Me.eBayTime.TabIndex = 0
         Me.eBayTime.Text = "eBay time should be shown here."
         '
-        'listItemButton
+        'Label19
         '
-        Me.listItemButton.Location = New System.Drawing.Point(306, 113)
-        Me.listItemButton.Name = "listItemButton"
-        Me.listItemButton.Size = New System.Drawing.Size(75, 23)
-        Me.listItemButton.TabIndex = 1
-        Me.listItemButton.Text = "List Item"
-        Me.listItemButton.UseVisualStyleBackColor = True
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(393, 121)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(49, 13)
+        Me.Label19.TabIndex = 30
+        Me.Label19.Text = "Quantity:"
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(285, 121)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(93, 13)
+        Me.Label20.TabIndex = 31
+        Me.Label20.Text = "Operating System:"
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(179, 121)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(73, 13)
+        Me.Label21.TabIndex = 32
+        Me.Label21.Text = "Manufacturer:"
+        '
+        'Label22
+        '
+        Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(73, 121)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(86, 13)
+        Me.Label22.TabIndex = 33
+        Me.Label22.Text = "Computer Name:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.Location = New System.Drawing.Point(394, 137)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 29
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox9.Location = New System.Drawing.Point(288, 137)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 28
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox10.Location = New System.Drawing.Point(182, 137)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox10.TabIndex = 27
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox11.Location = New System.Drawing.Point(76, 137)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox11.TabIndex = 26
         '
         'Main
         '
@@ -835,4 +923,12 @@ Partial Class Main
     Friend WithEvents ServerSettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents eBayTime As System.Windows.Forms.Label
     Friend WithEvents listItemButton As System.Windows.Forms.Button
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
 End Class
