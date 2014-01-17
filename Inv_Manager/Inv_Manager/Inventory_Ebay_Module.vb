@@ -7,6 +7,14 @@ Module Inventory_Ebay_Module
 
     Public apiContext As ApiContext = GetApiContext()
 
+    Public Sub loadEbayTab()
+        Main.ebayBox1.Text = selectedRow.Cells(1).Value
+        Main.ebayBox2.Text = selectedRow.Cells(2).Value
+        Main.ebayBox3.Text = selectedRow.Cells(3).Value
+        Main.ebayBox4.Text = selectedRow.Cells(4).Value
+        Main.TabControl1.SelectTab(3)
+    End Sub
+
     Public Sub addItemCall()
         Try
             Dim item As ItemType = BuildItem()

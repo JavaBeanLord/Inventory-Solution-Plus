@@ -6,10 +6,11 @@ Module Inventory_DataBase_Module
           "Data Source=" & My.Settings.serverhost.ToString() & ";" & _
           "User Id=" & My.Settings.serveruser.ToString() & ";Password=" & My.Settings.serverpassword.ToString()
     Public selectedCompID As String
+    Public selectedRow As Object
 
 
     Public Sub populateTextBoxes(e As DataGridViewCellEventArgs)
-        Dim selectedRow As Object = Main.DataGridView1.Rows(e.RowIndex)
+        selectedRow = Main.DataGridView1.Rows(e.RowIndex)
 
         selectedCompID = selectedRow.Cells(0).Value
 
@@ -17,8 +18,6 @@ Module Inventory_DataBase_Module
         Main.TextBox3.Text = selectedRow.Cells(2).Value
         Main.TextBox4.Text = selectedRow.Cells(3).Value
         Main.TextBox5.Text = selectedRow.Cells(4).Value
-
-        'actionCombo.SelectedItem = "Update"
     End Sub
 
     Public Sub checkForEmptiness()
@@ -33,22 +32,22 @@ Module Inventory_DataBase_Module
         If selectedCompID = Nothing And Main.actionCombo.SelectedItem = "Update" Then
             MsgBox("Please select an item or enter a new one.")
 
-        ElseIf Main.actionCombo.SelectedItem = "Insert" Then
-            updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
-                         "VALUES ('" & Main.DataGridView1.RowCount + 1 & "', '" & Main.TextBox2.Text & "', '" & _
-                         Main.TextBox3.Text & "', '" & Main.TextBox4.Text & "', '" & Main.TextBox5.Text & "')")
-
         ElseIf Main.actionCombo.SelectedItem = "Update" Then
             updateRecord("UPDATE inventory SET CompName='" & Main.TextBox2.Text & "', Manufacturer='" & Main.TextBox3.Text & _
                 "', OperatingSys='" & Main.TextBox4.Text & "', Quantity='" & Main.TextBox5.Text & _
                 "' WHERE CompID='" & selectedCompID & "'")
 
+        ElseIf Main.actionCombo.SelectedItem = "Insert" Then
+            updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
+                         "VALUES ('" & Main.DataGridView1.RowCount + 1 & "', '" & Main.TextBox2.Text & "', '" & _
+                         Main.TextBox3.Text & "', '" & Main.TextBox4.Text & "', '" & Main.TextBox5.Text & "')")
+
         ElseIf Main.actionCombo.SelectedItem = "Delete" Then
             updateRecord("DELETE FROM inventory WHERE CompID='" & selectedCompID & "'")
 
         ElseIf Main.actionCombo.SelectedItem = "List on eBay" Then
-            ' show ebay tab
-
+            ' show ebay tab and populate item textboxes
+            loadEbayTab()
         End If
         loadInventoryTable()
         clearAll()

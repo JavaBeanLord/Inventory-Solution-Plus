@@ -86,17 +86,17 @@ Partial Class Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.listItemButton = New System.Windows.Forms.Button()
-        Me.eBayTime = New System.Windows.Forms.Label()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.ebayBox4 = New System.Windows.Forms.TextBox()
+        Me.ebayBox3 = New System.Windows.Forms.TextBox()
+        Me.ebayBox2 = New System.Windows.Forms.TextBox()
+        Me.ebayBox1 = New System.Windows.Forms.TextBox()
+        Me.listItemButton = New System.Windows.Forms.Button()
+        Me.eBayTime = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -713,10 +713,10 @@ Partial Class Main
         Me.TabPage4.Controls.Add(Me.Label20)
         Me.TabPage4.Controls.Add(Me.Label21)
         Me.TabPage4.Controls.Add(Me.Label22)
-        Me.TabPage4.Controls.Add(Me.TextBox1)
-        Me.TabPage4.Controls.Add(Me.TextBox9)
-        Me.TabPage4.Controls.Add(Me.TextBox10)
-        Me.TabPage4.Controls.Add(Me.TextBox11)
+        Me.TabPage4.Controls.Add(Me.ebayBox4)
+        Me.TabPage4.Controls.Add(Me.ebayBox3)
+        Me.TabPage4.Controls.Add(Me.ebayBox2)
+        Me.TabPage4.Controls.Add(Me.ebayBox1)
         Me.TabPage4.Controls.Add(Me.listItemButton)
         Me.TabPage4.Controls.Add(Me.eBayTime)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
@@ -726,24 +726,6 @@ Partial Class Main
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Ebay Lister"
         Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'listItemButton
-        '
-        Me.listItemButton.Location = New System.Drawing.Point(500, 134)
-        Me.listItemButton.Name = "listItemButton"
-        Me.listItemButton.Size = New System.Drawing.Size(75, 23)
-        Me.listItemButton.TabIndex = 1
-        Me.listItemButton.Text = "List Item"
-        Me.listItemButton.UseVisualStyleBackColor = True
-        '
-        'eBayTime
-        '
-        Me.eBayTime.AutoSize = True
-        Me.eBayTime.Location = New System.Drawing.Point(411, 3)
-        Me.eBayTime.Name = "eBayTime"
-        Me.eBayTime.Size = New System.Drawing.Size(163, 13)
-        Me.eBayTime.TabIndex = 0
-        Me.eBayTime.Text = "eBay time should be shown here."
         '
         'Label19
         '
@@ -785,37 +767,55 @@ Partial Class Main
         Me.Label22.TabIndex = 33
         Me.Label22.Text = "Computer Name:"
         '
-        'TextBox1
+        'ebayBox4
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(394, 137)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 29
+        Me.ebayBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ebayBox4.Location = New System.Drawing.Point(394, 137)
+        Me.ebayBox4.Name = "ebayBox4"
+        Me.ebayBox4.Size = New System.Drawing.Size(100, 20)
+        Me.ebayBox4.TabIndex = 29
         '
-        'TextBox9
+        'ebayBox3
         '
-        Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox9.Location = New System.Drawing.Point(288, 137)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 28
+        Me.ebayBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ebayBox3.Location = New System.Drawing.Point(288, 137)
+        Me.ebayBox3.Name = "ebayBox3"
+        Me.ebayBox3.Size = New System.Drawing.Size(100, 20)
+        Me.ebayBox3.TabIndex = 28
         '
-        'TextBox10
+        'ebayBox2
         '
-        Me.TextBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox10.Location = New System.Drawing.Point(182, 137)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 27
+        Me.ebayBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ebayBox2.Location = New System.Drawing.Point(182, 137)
+        Me.ebayBox2.Name = "ebayBox2"
+        Me.ebayBox2.Size = New System.Drawing.Size(100, 20)
+        Me.ebayBox2.TabIndex = 27
         '
-        'TextBox11
+        'ebayBox1
         '
-        Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox11.Location = New System.Drawing.Point(76, 137)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 26
+        Me.ebayBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ebayBox1.Location = New System.Drawing.Point(76, 137)
+        Me.ebayBox1.Name = "ebayBox1"
+        Me.ebayBox1.Size = New System.Drawing.Size(100, 20)
+        Me.ebayBox1.TabIndex = 26
+        '
+        'listItemButton
+        '
+        Me.listItemButton.Location = New System.Drawing.Point(500, 135)
+        Me.listItemButton.Name = "listItemButton"
+        Me.listItemButton.Size = New System.Drawing.Size(75, 23)
+        Me.listItemButton.TabIndex = 1
+        Me.listItemButton.Text = "List Item"
+        Me.listItemButton.UseVisualStyleBackColor = True
+        '
+        'eBayTime
+        '
+        Me.eBayTime.AutoSize = True
+        Me.eBayTime.Location = New System.Drawing.Point(411, 3)
+        Me.eBayTime.Name = "eBayTime"
+        Me.eBayTime.Size = New System.Drawing.Size(163, 13)
+        Me.eBayTime.TabIndex = 0
+        Me.eBayTime.Text = "eBay time should be shown here."
         '
         'Main
         '
@@ -927,8 +927,8 @@ Partial Class Main
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents ebayBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents ebayBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents ebayBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents ebayBox1 As System.Windows.Forms.TextBox
 End Class

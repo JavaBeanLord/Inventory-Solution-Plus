@@ -130,8 +130,16 @@ Public Class Main
     End Sub
 
     Private Sub actionCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles actionCombo.SelectedIndexChanged
-        'clearAll()
         ' should change enter button text instead of clear all
+        If actionCombo.SelectedItem = "Update" Then
+            enterButton.Text = "Update"
+        ElseIf actionCombo.SelectedItem = "Insert" Then
+            enterButton.Text = "Insert"
+        ElseIf actionCombo.SelectedItem = "Delete" Then
+            enterButton.Text = "Delete"
+        ElseIf actionCombo.Text = "List on eBay" Then
+            enterButton.Text = "List"
+        End If
     End Sub
 
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
