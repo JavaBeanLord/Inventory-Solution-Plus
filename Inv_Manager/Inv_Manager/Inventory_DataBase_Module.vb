@@ -5,9 +5,39 @@ Module Inventory_DataBase_Module
     Public connStr As String = "Database=localtest;" & _
           "Data Source=" & My.Settings.serverhost.ToString() & ";" & _
           "User Id=" & My.Settings.serveruser.ToString() & ";Password=" & My.Settings.serverpassword.ToString()
+    Public connection As New MySqlConnection(connStr)
     Public selectedCompID As String
     Public selectedRow As Object
 
+    Public Sub loadTablesComboBox()
+        Dim dataTable As DataTable = New DataTable
+        Dim adapter As MySqlDataAdapter = New MySqlDataAdapter
+        Dim command As MySqlCommand = New MySqlCommand
+        command.Connection = connection
+        command.CommandText = "SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE" & _
+            " TABLE_SCHEMA='YourDatabase'"
+        Dim reader As MySqlDataReader = command.ExecuteReader()
+        Try
+
+            adapter.SelectCommand = command
+            reader = command.ExecuteReader
+
+            'adapter.Fill(dt)
+            dataTable.Load(reader)
+
+            Main.tablesCombobox.DataSource = dataTable
+
+        Catch ex As MySqlException
+            MessageBox.Show("Error1: " & ex.Message)
+        Finally
+            reader.Close()
+            connection.Close()
+        End Try
+    End Sub
+
+    Public Sub createNewTable()
+
+    End Sub
 
     Public Sub populateTextBoxes(e As DataGridViewCellEventArgs)
         selectedRow = Main.DataGridView1.Rows(e.RowIndex)
@@ -56,7 +86,6 @@ Module Inventory_DataBase_Module
     Public Sub loadInventoryTable()
         Try
             Dim query As String = "SELECT * FROM inventory"
-            Dim connection As New MySqlConnection(connStr)
             Dim da As New MySqlDataAdapter(query, connection)
             Dim ds As New DataSet()
 

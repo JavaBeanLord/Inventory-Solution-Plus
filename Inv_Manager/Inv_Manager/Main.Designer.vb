@@ -30,7 +30,6 @@ Partial Class Main
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServerSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -80,6 +79,8 @@ Partial Class Main
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.addTableButton = New System.Windows.Forms.Button()
+        Me.tablesCombobox = New System.Windows.Forms.ComboBox()
         Me.refreshButton = New System.Windows.Forms.PictureBox()
         Me.searchbtn = New System.Windows.Forms.Button()
         Me.searchtb = New System.Windows.Forms.TextBox()
@@ -97,6 +98,8 @@ Partial Class Main
         Me.listItemButton = New System.Windows.Forms.Button()
         Me.eBayTime = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -153,16 +156,6 @@ Partial Class Main
         Me.BetaToolStripMenuItem.Name = "BetaToolStripMenuItem"
         Me.BetaToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.BetaToolStripMenuItem.Text = "Beta"
-        '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.Location = New System.Drawing.Point(12, 346)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(659, 39)
-        Me.Panel1.TabIndex = 1
         '
         'Timer1
         '
@@ -496,7 +489,7 @@ Partial Class Main
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.ForeColor = System.Drawing.Color.Gray
         Me.Label6.Location = New System.Drawing.Point(595, 18)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 33)
@@ -551,7 +544,7 @@ Partial Class Main
         Me.actionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.actionCombo.FormattingEnabled = True
         Me.actionCombo.Items.AddRange(New Object() {"Insert", "Update", "Delete", "List on eBay"})
-        Me.actionCombo.Location = New System.Drawing.Point(14, 258)
+        Me.actionCombo.Location = New System.Drawing.Point(7, 258)
         Me.actionCombo.Name = "actionCombo"
         Me.actionCombo.Size = New System.Drawing.Size(121, 21)
         Me.actionCombo.TabIndex = 3
@@ -642,7 +635,9 @@ Partial Class Main
         '
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel4.Controls.Add(Me.addTableButton)
+        Me.Panel4.Controls.Add(Me.tablesCombobox)
         Me.Panel4.Controls.Add(Me.refreshButton)
         Me.Panel4.Controls.Add(Me.searchbtn)
         Me.Panel4.Controls.Add(Me.searchtb)
@@ -650,6 +645,23 @@ Partial Class Main
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(637, 26)
         Me.Panel4.TabIndex = 1
+        '
+        'addTableButton
+        '
+        Me.addTableButton.Location = New System.Drawing.Point(132, 2)
+        Me.addTableButton.Name = "addTableButton"
+        Me.addTableButton.Size = New System.Drawing.Size(26, 22)
+        Me.addTableButton.TabIndex = 30
+        Me.addTableButton.Text = "+"
+        Me.addTableButton.UseVisualStyleBackColor = True
+        '
+        'tablesCombobox
+        '
+        Me.tablesCombobox.FormattingEnabled = True
+        Me.tablesCombobox.Location = New System.Drawing.Point(5, 2)
+        Me.tablesCombobox.Name = "tablesCombobox"
+        Me.tablesCombobox.Size = New System.Drawing.Size(121, 21)
+        Me.tablesCombobox.TabIndex = 29
         '
         'refreshButton
         '
@@ -817,6 +829,16 @@ Partial Class Main
         Me.eBayTime.TabIndex = 0
         Me.eBayTime.Text = "eBay time should be shown here."
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel1.Location = New System.Drawing.Point(12, 346)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(659, 39)
+        Me.Panel1.TabIndex = 1
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -863,7 +885,6 @@ Partial Class Main
     Friend WithEvents ToolsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BetaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -931,4 +952,8 @@ Partial Class Main
     Friend WithEvents ebayBox3 As System.Windows.Forms.TextBox
     Friend WithEvents ebayBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ebayBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents addTableButton As System.Windows.Forms.Button
+    Friend WithEvents tablesCombobox As System.Windows.Forms.ComboBox
+    Friend WithEvents Timer3 As System.Windows.Forms.Timer
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

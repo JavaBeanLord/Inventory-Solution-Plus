@@ -27,6 +27,7 @@ Public Class Main
         loadInventoryTable()
         eBayTime.Text = "eBay's Official Time: " & timeCall()
         actionCombo.SelectedItem = "Update"
+        'loadTablesComboBox()
     End Sub
 #End Region
 
@@ -34,11 +35,11 @@ Public Class Main
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         If My.Settings.finsh <= 49 Then
-            Panel1.BackColor = Color.Red
+            Panel1.BackColor = Color.LightGray
         ElseIf My.Settings.finsh <= 74 Then
-            Panel1.BackColor = Color.Yellow
+            Panel1.BackColor = Color.Gray
         ElseIf My.Settings.finsh <= 99 Then
-            Panel1.BackColor = Color.Green
+            Panel1.BackColor = Color.Black
         End If
 
         Label1.Text = ("Program is ") & My.Settings.finsh & ("% Complete!")
@@ -77,6 +78,14 @@ Public Class Main
 #End Region
 
 #Region "DataGrid Interaction"
+
+    Private Sub tablesCombobox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tablesCombobox.SelectedIndexChanged
+        
+    End Sub
+
+    Private Sub addTableButton_Click(sender As Object, e As EventArgs) Handles addTableButton.Click
+
+    End Sub
 
     Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
         loadInventoryTable()
@@ -155,4 +164,5 @@ Public Class Main
     End Sub
 
 #End Region
+
 End Class
