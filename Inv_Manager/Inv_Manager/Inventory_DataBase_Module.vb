@@ -10,28 +10,30 @@ Module Inventory_DataBase_Module
     Public selectedRow As Object
 
     Public Sub loadTablesComboBox()
-        Dim dataTable As DataTable = New DataTable
-        Dim adapter As MySqlDataAdapter = New MySqlDataAdapter
-        Dim command As MySqlCommand = New MySqlCommand
-        command.Connection = connection
-        command.CommandText = "SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE" & _
-            " TABLE_SCHEMA='YourDatabase'"
-        Dim reader As MySqlDataReader = command.ExecuteReader()
         Try
+            Dim dataTable As DataTable = New DataTable
+            Dim command As MySqlCommand = New MySqlCommand
+            Dim adapter As New MySqlDataAdapter
+            Dim reader As MySqlDataReader
+
+            connection.Open()
+            command.Connection = connection
+            command.CommandText = "SHOW TABLES"
 
             adapter.SelectCommand = command
-            reader = command.ExecuteReader
+            reader = command.ExecuteReader()
 
-            'adapter.Fill(dt)
             dataTable.Load(reader)
 
             Main.tablesCombobox.DataSource = dataTable
+            Main.tablesCombobox.DisplayMember = "Tables_in_localtest"
+            Main.tablesCombobox.ValueMember = "Tables_in_localtest"
+
+            reader.Close()
+            connection.Close()
 
         Catch ex As MySqlException
             MessageBox.Show("Error1: " & ex.Message)
-        Finally
-            reader.Close()
-            connection.Close()
         End Try
     End Sub
 
@@ -104,7 +106,6 @@ Module Inventory_DataBase_Module
     Public Sub retrieveDataToDataGrid(compName As String)
         Try
             Dim query As String = "SELECT * FROM inventory WHERE CompName = '" & compName & "'"
-            Dim connection As New MySqlConnection(connStr)
             Dim da As New MySqlDataAdapter(query, connection)
             Dim ds As New DataSet()
 

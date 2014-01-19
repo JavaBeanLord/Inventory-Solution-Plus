@@ -24,10 +24,10 @@ Public Class Main
         Timer1.Enabled = True
         ''end Timer Complete
 
+        loadTablesComboBox()
         loadInventoryTable()
         eBayTime.Text = "eBay's Official Time: " & timeCall()
         actionCombo.SelectedItem = "Update"
-        'loadTablesComboBox()
     End Sub
 #End Region
 
@@ -80,7 +80,7 @@ Public Class Main
 #Region "DataGrid Interaction"
 
     Private Sub tablesCombobox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tablesCombobox.SelectedIndexChanged
-        
+
     End Sub
 
     Private Sub addTableButton_Click(sender As Object, e As EventArgs) Handles addTableButton.Click
