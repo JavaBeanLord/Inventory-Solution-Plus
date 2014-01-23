@@ -9,6 +9,10 @@ Module Inventory_DataBase_Module
     Public selectedCompID As String
     Public selectedRow As Object
 
+    Public Sub createNewTable()
+
+    End Sub
+
     Public Sub loadTablesComboBox()
         Try
             Dim dataTable As DataTable = New DataTable
@@ -37,10 +41,6 @@ Module Inventory_DataBase_Module
         End Try
     End Sub
 
-    Public Sub createNewTable()
-
-    End Sub
-
     Public Sub populateTextBoxes(e As DataGridViewCellEventArgs)
         selectedRow = Main.DataGridView1.Rows(e.RowIndex)
 
@@ -65,29 +65,29 @@ Module Inventory_DataBase_Module
             MsgBox("Please select an item or enter a new one.")
 
         ElseIf Main.actionCombo.SelectedItem = "Update" Then
-            updateRecord("UPDATE inventory SET CompName='" & Main.TextBox2.Text & "', Manufacturer='" & Main.TextBox3.Text & _
+            sendQuery("UPDATE inventory SET CompName='" & Main.TextBox2.Text & "', Manufacturer='" & Main.TextBox3.Text & _
                 "', OperatingSys='" & Main.TextBox4.Text & "', Quantity='" & Main.TextBox5.Text & _
                 "' WHERE CompID='" & selectedCompID & "'")
 
         ElseIf Main.actionCombo.SelectedItem = "Insert" Then
-            updateRecord("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
+            sendQuery("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
                          "VALUES ('" & Main.DataGridView1.RowCount + 1 & "', '" & Main.TextBox2.Text & "', '" & _
                          Main.TextBox3.Text & "', '" & Main.TextBox4.Text & "', '" & Main.TextBox5.Text & "')")
 
         ElseIf Main.actionCombo.SelectedItem = "Delete" Then
-            updateRecord("DELETE FROM inventory WHERE CompID='" & selectedCompID & "'")
+            sendQuery("DELETE FROM inventory WHERE CompID='" & selectedCompID & "'")
 
         ElseIf Main.actionCombo.SelectedItem = "List on eBay" Then
             ' show ebay tab and populate item textboxes
             loadEbayTab()
         End If
-        loadInventoryTable()
+        loadInventoryTable(Main.tablesCombobox.Text)
         clearAll()
     End Sub
 
-    Public Sub loadInventoryTable()
+    Public Sub loadInventoryTable(selectedTable As String)
         Try
-            Dim query As String = "SELECT * FROM inventory"
+            Dim query As String = "SELECT * FROM " & selectedTable
             Dim da As New MySqlDataAdapter(query, connection)
             Dim ds As New DataSet()
 
@@ -120,8 +120,7 @@ Module Inventory_DataBase_Module
         End Try
     End Sub
 
-    ' Takes any UPDATE or INSERT command
-    Public Function updateRecord(ByVal query As String) As Integer
+    Public Function sendQuery(ByVal query As String) As Integer
         Try
             Dim rowsEffected As Integer = 0
             Dim connection As New MySqlConnection(connStr)

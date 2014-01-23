@@ -657,6 +657,7 @@ Partial Class Main
         '
         'tablesCombobox
         '
+        Me.tablesCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.tablesCombobox.FormattingEnabled = True
         Me.tablesCombobox.Location = New System.Drawing.Point(5, 2)
         Me.tablesCombobox.Name = "tablesCombobox"

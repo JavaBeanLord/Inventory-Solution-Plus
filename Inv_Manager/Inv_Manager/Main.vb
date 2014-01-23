@@ -25,7 +25,7 @@ Public Class Main
         ''end Timer Complete
 
         loadTablesComboBox()
-        loadInventoryTable()
+        loadInventoryTable("computers")
         eBayTime.Text = "eBay's Official Time: " & timeCall()
         actionCombo.SelectedItem = "Update"
     End Sub
@@ -80,7 +80,7 @@ Public Class Main
 #Region "DataGrid Interaction"
 
     Private Sub tablesCombobox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tablesCombobox.SelectedIndexChanged
-
+        loadInventoryTable(tablesCombobox.Text)
     End Sub
 
     Private Sub addTableButton_Click(sender As Object, e As EventArgs) Handles addTableButton.Click
@@ -88,7 +88,7 @@ Public Class Main
     End Sub
 
     Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
-        loadInventoryTable()
+        loadInventoryTable(tablesCombobox.Text)
         clearAll()
     End Sub
 
