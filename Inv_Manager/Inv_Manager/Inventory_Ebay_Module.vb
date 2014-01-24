@@ -8,11 +8,15 @@ Module Inventory_Ebay_Module
     Public apiContext As ApiContext = GetApiContext()
 
     Public Sub loadEbayTab()
-        Main.ebayBox1.Text = selectedRow.Cells(1).Value
-        Main.ebayBox2.Text = selectedRow.Cells(2).Value
-        Main.ebayBox3.Text = selectedRow.Cells(3).Value
-        Main.ebayBox4.Text = selectedRow.Cells(4).Value
-        Main.TabControl1.SelectTab(3)
+        Main.TabControl1.SelectTab(3) ' show ebay tab
+
+        Main.ebayTextBox1.Text = selectedRow.Cells(2).Value ' listing title
+        Main.ebayTextBox2.Text = selectedRow.Cells(6).Value ' price
+        Main.ebayTextBox3.Text = selectedRow.Cells(7).Value ' quantity
+        Main.ebayTextBox4.Text = selectedRow.Cells(5).Value ' location
+        Main.ebayTextBox6.Text = selectedRow.Cells(9).Value ' categoryID
+        Main.ebayTextBox5.Text = "10" ' default listing duration
+        Main.RichTextBox3.Text = selectedRow.Cells(3).Value ' description
     End Sub
 
     Public Sub addItemCall()
@@ -30,27 +34,27 @@ Module Inventory_Ebay_Module
             ' show listing and item id
             MsgBox("Listing Fee: " & listingFee & " Item ID: " & item.ItemID)
         Catch ex As Exception
-            MsgBox("Error: Could not list item.")
+            MsgBox("Error: Could not list item. All fields must be filled.")
         End Try
     End Sub
 
     Private Function BuildItem() As ItemType
         Dim item As ItemType = New ItemType()
 
-        item.Title = "Dell Latitude"
-        item.Description = "This is a test item."
+        item.Title = Main.ebayTextBox1.Text
+        item.Description = Main.RichTextBox3.Text
         item.ListingType = ListingTypeCodeType.Chinese
         item.Currency = CurrencyCodeType.USD
         item.StartPrice = New AmountType()
         item.StartPrice.Value = 20
         item.StartPrice.currencyID = CurrencyCodeType.USD
-        item.ListingDuration = "Days_5"
-        item.Location = "Smithfield"
+        item.ListingDuration = "Days_" & Main.ebayTextBox5.Text
+        item.Location = Main.ebayTextBox4.Text
         item.Country = CountryCodeType.US
 
         Dim category As CategoryType = New CategoryType()
 
-        category.CategoryID = "162922"
+        category.CategoryID = Main.ebayTextBox6.Text
         item.PrimaryCategory = category
         item.Quantity = 1
         item.PaymentMethods = New BuyerPaymentMethodCodeTypeCollection()

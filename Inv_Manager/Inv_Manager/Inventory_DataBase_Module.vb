@@ -42,14 +42,14 @@ Module Inventory_DataBase_Module
     End Sub
 
     Public Sub populateTextBoxes(e As DataGridViewCellEventArgs)
-        selectedRow = Main.DataGridView1.Rows(e.RowIndex)
+        selectedRow = Main.DataGridView1.Rows(e.RowIndex) ' gets selection from click handler
 
-        selectedCompID = selectedRow.Cells(0).Value
+        selectedCompID = selectedRow.Cells(0).Value ' ID not seen by user
 
-        Main.TextBox2.Text = selectedRow.Cells(1).Value
-        Main.TextBox3.Text = selectedRow.Cells(2).Value
-        Main.TextBox4.Text = selectedRow.Cells(3).Value
-        Main.TextBox5.Text = selectedRow.Cells(4).Value
+        Main.TextBox2.Text = selectedRow.Cells(1).Value ' product name
+        Main.TextBox3.Text = selectedRow.Cells(6).Value ' price
+        Main.TextBox4.Text = selectedRow.Cells(5).Value ' location
+        Main.TextBox5.Text = selectedRow.Cells(7).Value ' quantity
     End Sub
 
     Public Sub checkForEmptiness()
@@ -65,12 +65,12 @@ Module Inventory_DataBase_Module
             MsgBox("Please select an item or enter a new one.")
 
         ElseIf Main.actionCombo.SelectedItem = "Update" Then
-            sendQuery("UPDATE inventory SET CompName='" & Main.TextBox2.Text & "', Manufacturer='" & Main.TextBox3.Text & _
-                "', OperatingSys='" & Main.TextBox4.Text & "', Quantity='" & Main.TextBox5.Text & _
+            sendQuery("UPDATE inventory SET Product='" & Main.TextBox2.Text & "', Price='" & Main.TextBox3.Text & _
+                "', Location='" & Main.TextBox4.Text & "', Quantity='" & Main.TextBox5.Text & _
                 "' WHERE CompID='" & selectedCompID & "'")
 
         ElseIf Main.actionCombo.SelectedItem = "Insert" Then
-            sendQuery("INSERT INTO inventory (CompID, CompName, Manufacturer, OperatingSys, Quantity) " & _
+            sendQuery("INSERT INTO inventory (CompID, Product, Price, Location, Quantity) " & _
                          "VALUES ('" & Main.DataGridView1.RowCount + 1 & "', '" & Main.TextBox2.Text & "', '" & _
                          Main.TextBox3.Text & "', '" & Main.TextBox4.Text & "', '" & Main.TextBox5.Text & "')")
 
